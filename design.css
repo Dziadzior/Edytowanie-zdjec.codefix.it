@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(179, 179, 179);
+}
+
+.blok {
+    padding: 25px 30px 30px;
+    width: 850px;
+    background: whitesmoke;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.blok.wylaczony :where(.panel-edytor, .reset-filtry, .zapisz-zdjecie) {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.blok h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.blok .podglad-zdjecia {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.podglad-zdjecia img {
+    width: 100%;
+    height: 100%;
+    max-width: 490px;
+    max-height: 335px;
+    object-fit: contain;
+}
+
+.blok .glowny {
+    display: flex;
+    margin: 20px 0;
+    min-height: 340px;
+}
+
+.glowny .panel-edytor {
+    padding: 10px 15px;
+    width: 280px;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+.panel-edytor .tytul {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.panel-edytor .opcje,
+.kontrolki {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.panel-edytor button {
+    margin-bottom: 8px;
+    height: 40px;
+    color: gray;
+    background: whitesmoke;
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.panel-edytor button:hover {
+    color: whitesmoke;
+    background: gray;
+}
+
+.panel-edytor .filtr button {
+    width: calc(100% / 2 - 4px);
+}
+
+.panel-edytor .obrot {
+    margin-top: 18px;
+}
+
+.filtr button.aktywny {
+    color: whitesmoke;
+    background: #ff3232;
+    border-color: gray;
+}
+
+.panel-edytor .obrot button {
+    width: calc(100% / 4 - 4px);
+}
+
+.filtr .pasek {
+    margin-top: 15px;
+}
+
+.filtr .pasek .filtr-info {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    font-size: 20px;
+}
+
+.filtr .pasek input {
+    width: 100%;
+    height: 8px;
+    accent-color: #ff3232;
+}
+
+.kontrolki button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    color: whitesmoke;
+    background: whitesmoke;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.kontrolki .reset-filtry {
+    color: gray;
+    border: 1px solid gray;
+}
+
+.kontrolki .wybierz-zdjecie {
+    background: rgb(51, 51, 51);
+    border: 1px solid gray;
+}
+
+.kontrolki .zapisz-zdjecie{
+    margin-left: 10px;
+    background: #ff3232;
+    border: 1px solid gray;
+}
+
+/* Media */
+
+@media screen and (max-width: 760px) {
+
+    .blok {
+        padding: 25px;
+    }
+
+    .blok .glowny {
+        flex-wrap: wrap-reverse;
+    }
+
+    .glowny .panel-edytor {
+        width: 100%;
+    }
+
+    .glowny .podglad-zdjecia {
+        width: 100%;
+        margin: 0 0 15px;
+    }
+} 
+
+@media screen and (max-width: 500px) {
+
+    .kontrolki button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .kontrolki .wiersz {
+        width: 100%;
+    }
+
+    .kontrolki .wiersz .zapisz-zdjecie {
+        margin-left: 0px;
+    }
+}

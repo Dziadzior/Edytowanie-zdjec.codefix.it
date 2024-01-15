@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="design.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="blok wylaczony">
+        <h2>Edytor Zdjęć</h2>
+        <div class="glowny">
+            <div class="panel-edytor">
+                <div class="filtr">
+                    <label class="tytul">Filtry</label>
+                    <div class="opcje">
+                        <button class="aktywny">Jasność</button>
+                        <button>Saturacja</button>
+                        <button>Inwersja</button>
+                        <button>Skala szarości</button>
+                    </div>
+                    <div class="pasek">
+                        <div class="filtr-info">
+                            <p class="nazwa">Jasność</p>
+                            <p class="wartosc">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div class="obrot">
+                    <label class="tytul">Obrot & Orientacja</label>
+                    <div class="opcje">
+                        <button><i class="fa-solid fa-rotate-left"></i></button>
+                        <button><i class="fa-solid fa-rotate-right"></i></button>
+                        <button><i class="fa-solid fa-arrows-up-down"></i></button>
+                        <button><i class="fa-solid fa-arrows-left-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="podglad-zdjecia">
+                <img src="placeholder.png" alt="podglad-zdjecia">
+            </div>
+        </div>
+        <div class="kontrolki">
+            <button class="reset-filtry">Reset Filtrów</button>
+            <div class="wiersz">
+                <input type="file" class="plik-pole" accept="image/*" hidden>
+                <button class="wybierz-zdjecie">Wybierz zdjecie</button>
+                <button class="zapisz-zdjecie">Zapisz zdjecie</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/264a91385a.js" crossorigin="anonymous"></script>
+
+    <!-- BoxIcon -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- JS -->
+    <script src="skrypt.js"></script>
+
+</body>
+</html>
