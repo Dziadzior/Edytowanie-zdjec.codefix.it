@@ -11,17 +11,17 @@
 </head>
 <body>
     
-    <div class="blok">
+    <div class="blok wylaczony">
         <h2>Edytor Zdjęć</h2>
         <div class="glowny">
             <div class="panel-edytor">
                 <div class="filtr">
                     <label class="tytul">Filtry</label>
                     <div class="opcje">
-                        <button class="aktywny">Jasność</button>
-                        <button>Saturacja</button>
-                        <button>Inwersja</button>
-                        <button>Skala szarości</button>
+                        <button id="jasnosc" class="aktywny">Jasność</button>
+                        <button id="saturacja">Saturacja</button>
+                        <button id="inwersja">Inwersja</button>
+                        <button id="skala">Skala szarości</button>
                     </div>
                     <div class="pasek">
                         <div class="filtr-info">
@@ -32,12 +32,12 @@
                     </div>
                 </div>
                 <div class="obrot">
-                    <label class="tytul">Obrot & Orientacja</label>
+                    <label class="tytul">Obrot i Orientacja</label>
                     <div class="opcje">
-                        <button><i class="fa-solid fa-rotate-left"></i></button>
-                        <button><i class="fa-solid fa-rotate-right"></i></button>
-                        <button><i class="fa-solid fa-arrows-up-down"></i></button>
-                        <button><i class="fa-solid fa-arrows-left-right"></i></button>
+                        <button id="lewa"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="prawa"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button id="poziomo"><i class="fa-solid fa-arrows-left-right"></i></button>
+                        <button id="pionowo"><i class="fa-solid fa-arrows-up-down"></i></button>
                     </div>
                 </div>
             </div>
